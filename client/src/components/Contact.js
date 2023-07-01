@@ -79,7 +79,7 @@ const Contact = () => {
   }
 
   return (
-    <>
+    <div className='home-container'>
       <form method="POST">
         <div>
           <input
@@ -123,7 +123,7 @@ const Contact = () => {
         <div className="contact_form_button"></div>
         <button type="submit" className="button contact_submit_button" onClick={contactForm}>Send Message</button>
       </form>
-    </>
+    </div>
   );
 };
 

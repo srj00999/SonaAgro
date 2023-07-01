@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Errorpage = () => {
   return (
-    <>
+    <div className='home-container'>
       <div id="notfound">
         <div className="notfound">
           <div className="notfound-404"></div>
@@ -15,7 +15,7 @@ const Errorpage = () => {
         </p>
         <NavLink to="/">  Back To Homepage</NavLink>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -59,7 +59,7 @@ const Signup = () => {
 
   
   return (
-    <>
+    <div className='home-container'>
       <section className="signup">
         <div className="container">
           <div className="signup-content">
@@ -147,7 +147,7 @@ const Signup = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

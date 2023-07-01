@@ -38,7 +38,7 @@ const loginUser  =  async (e) => {
 
 
   return (
-    <>
+    <div className='home-container'>
       <section className=" sign-in">
         <div className="container">
           <div className=" sign-in-content">
@@ -87,7 +87,7 @@ const loginUser  =  async (e) => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
