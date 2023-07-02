@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../App";
-// import "./Login.css";
+import "./Login.css";
 
 
 
@@ -42,9 +42,9 @@ const Login = () => {
   return (
     <>
       <div className="home-container">
-        <div>
+        
         <div className="box">
-          <form method="POST" autocomplete="off">
+          <form className="form-login" method="POST" autocomplete="off">
             <h2>Sign in</h2>
             <div className="inputBox">
               {/* <input type="text" required="required"> */}
@@ -94,7 +94,6 @@ const Login = () => {
           </form>
         </div>
         </div>
-      </div>
     </>
   );
 };

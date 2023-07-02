@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 *
 
-.box 
+.boxes 
 {
 	position: relative;
 	width: 380px;
-	height: 420px;
+	height: 670px;
 	background: #1c1c1c;
 	border-radius: 8px;
 	overflow: hidden;
 }
-.box::before 
+.boxes::before 
 {
 	content: '';
 	z-index: 1;
@@ -18,12 +18,12 @@
 	top: -50%;
 	left: -50%;
 	width: 380px;
-	height: 420px;
+	height: 670px;
 	transform-origin: bottom right;
 	background: linear-gradient(0deg,transparent,hsl(61, 86%, 72%),hsl(61, 86%, 72%));
 	animation: animate 6s linear infinite;
 }
-.box::after 
+.boxes::after 
 {
 	content: '';
 	z-index: 1;
@@ -31,7 +31,7 @@
 	top: -50%;
 	left: -50%;
 	width: 380px;
-	height: 420px;
+	height: 670px;
 	transform-origin: bottom right;
 	background: linear-gradient(0deg,transparent,hsl(61, 86%, 72%),hsl(61, 86%, 72%));
 	animation: animate 6s linear infinite;
@@ -81,8 +81,7 @@ h2
 	outline: none;
 	box-shadow: none;
 	border: none;
-	/* color: #23242a; */
-	
+	color: #23242a;
 	font-size: 1em;
 	letter-spacing: 0.05em;
 	transition: 0.5s;

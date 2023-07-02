@@ -80,12 +80,13 @@ const Contact = () => {
 
   return (
     <div className='home-container'>
-      <form method="POST">
+     <div className="contact-form-container">
+     <form className="contact-form" method="POST">
         <div>
           <input
             type="text"
             id="contact_form_name"
-            className="contact_form_name"
+            className="contact_form_input"
             name="name"
             value={userData.name}
             onChange={handleInputs}
@@ -95,7 +96,7 @@ const Contact = () => {
           <input
             type="text"
             id="contact_form_email"
-            className="contact_form_email"
+            className="contact_form_input"
             name="email"
             value={userData.email}
             onChange={handleInputs}
@@ -105,7 +106,7 @@ const Contact = () => {
           <input
             type="number"
             id="contact_form_phone"
-            className="contact_form_phone"
+            className="contact_form_input"
             name="phone"
             value={userData.phone}
             onChange={handleInputs}
@@ -121,8 +122,9 @@ const Contact = () => {
           placeholder="Message" cols="74" rows="8"></textarea>
         </div>
         <div className="contact_form_button"></div>
-        <button type="submit" className="button contact_submit_button" onClick={contactForm}>Send Message</button>
+        <button type="submit" className="button_contact_submit_button" onClick={contactForm}>Send Message</button>
       </form>
+     </div>
     </div>
   );
 };

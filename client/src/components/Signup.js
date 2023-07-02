@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Signup.css";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -59,16 +60,14 @@ const Signup = () => {
 
   
   return (
-    <div className='home-container'>
-      <section className="signup">
-        <div className="container">
-          <div className="signup-content">
-            <div className="signup-form">
-              <h2 className="form-title">Sign up</h2>
-              <form method="POST" className="register-form">
-                <div className="form-group">
-                  <label htmlFor="name"></label>
-                  <input
+    <>
+    <div className="home-container">
+        
+        <div className="boxes">
+          <form className="form-login" method="POST" autocomplete="off">
+            <h2>Sign Up</h2>
+            <div className="inputBox">
+            <input
                     type="text"
                     name="name"
                     id="name"
@@ -76,10 +75,11 @@ const Signup = () => {
                     onChange={handleInputs}
                     placeholder="Your Name"
                   />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="email"></label>
-                  <input
+              <span>Name</span>
+              <i></i>
+            </div>
+            <div className="inputBox">
+            <input
                     type="text"
                     name="email"
                     id="email"
@@ -87,10 +87,11 @@ const Signup = () => {
                     onChange={handleInputs}
                     placeholder="Your Email"
                   />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="phone"></label>
-                  <input
+              <span>Email</span>
+              <i></i>
+            </div>
+            <div className="inputBox">
+            <input
                     type="text"
                     name="phone"
                     id="phone"
@@ -98,10 +99,11 @@ const Signup = () => {
                     onChange={handleInputs}
                     placeholder="Your Phone"
                   />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="work"></label>
-                  <input
+              <span>Phone no</span>
+              <i></i>
+            </div>
+            <div className="inputBox">
+            <input
                     type="text"
                     name="work"
                     id="work"
@@ -109,10 +111,11 @@ const Signup = () => {
                     onChange={handleInputs}
                     placeholder="Your Profession"
                   />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="password"></label>
-                  <input
+              <span>Your work</span>
+              <i></i>
+            </div>
+            <div className="inputBox">
+            <input
                     type="text"
                     name="password"
                     id="password"
@@ -120,10 +123,11 @@ const Signup = () => {
                     onChange={handleInputs}
                     placeholder="Password"
                   />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="cpassword"></label>
-                  <input
+              <span>Password</span>
+              <i></i>
+            </div>
+            <div className="inputBox">
+            <input
                     type="text"
                     name="cpassword"
                     id="cpassword"
@@ -131,9 +135,14 @@ const Signup = () => {
                     onChange={handleInputs}
                     placeholder="Confirm Password"
                   />
-                </div>
-                <div className="form-group form-button">
-                  <input
+              <span>Confirm Password</span>
+              <i></i>
+            </div>
+            <div className="links">
+              <a href="#">Forgot Password ?</a>
+              <a href="#">Signup</a>
+            </div>
+            <input
                     type="submit"
                     name="signup"
                     id="signup"
@@ -141,13 +150,10 @@ const Signup = () => {
                     value="register"
                     onClick={PostData}
                   />
-                </div>
-              </form>
-            </div>
-          </div>
+          </form>
         </div>
-      </section>
-    </div>
+        </div>
+    </>
   );
 };
 

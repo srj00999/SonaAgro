@@ -50,41 +50,43 @@ const Home = () => {
         </div>
       </div>
       <div>
-        <div className="service-container" >
-          <div className="service-heading">
-            <h1 id="target">Services</h1>
-          </div>
-          <div className="service-item-container">
-            <div className="service-box">
-              <div className="service-picture-container">
-              <img src={Image1} alt="about image" />
-              </div>
-              <div className="service-headings">
-                <h2>Services 1</h2>
-                <p>Fishes</p>
-                <button>Buy Now</button>
-              </div>
+        <div className="service-container">
+          <div className="service_disk">
+            <div className="service-heading">
+              <h1 id="target">Services</h1>
             </div>
-            <div className="service-box" >
-              <div className="service-picture-container">
-              <img src={Image1} alt="about image" />
+            <div className="service-item-container">
+              <div className="service-box">
+                <div className="service-picture-container">
+                  <img src={Image1} alt="about image" />
+                </div>
+                <div className="service-headings">
+                  <h2>Services 1</h2>
+                  <p>Fishes</p>
+                  <button>Buy Now</button>
+                </div>
               </div>
-              <div className="service-headings">
-                <h2>Services 2</h2>
-                <p>Chicken</p>
-                <button>Buy Now</button>
+              <div className="service-box">
+                <div className="service-picture-container">
+                  <img src={Image1} alt="about image" />
+                </div>
+                <div className="service-headings">
+                  <h2>Services 2</h2>
+                  <p>Chicken</p>
+                  <button>Buy Now</button>
+                </div>
               </div>
-            </div>
-            <div className="service-box">
-              <div className="service-picture-container">
-              <img src={Image1} alt="about image" />
-              </div>
-              <div>
-              <div className="service-headings">
-                <h2>Services 3</h2>
-                <p>Fishes</p>
-                <button>Buy Now</button>
-              </div>
+              <div className="service-box">
+                <div className="service-picture-container">
+                  <img src={Image1} alt="about image" />
+                </div>
+                <div>
+                  <div className="service-headings">
+                    <h2>Services 3</h2>
+                    <p>Fishes</p>
+                    <button>Buy Now</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
