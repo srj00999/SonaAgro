@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Fish from "../images/Fish.png";
 
-
-
 const About = () => {
   const [userData, setUserData] = useState({});
   const navigate = useNavigate();
@@ -46,18 +44,24 @@ const About = () => {
           <div>
             <form method="GET">
               <div className="about-container">
-               <span className="about-content">
-                <h1>About </h1>
-               </span>
-               <span className="about-content">
-                <p>The main discussion topic at Sona Agro often pavethe way to surprising  and unexpected conservations thanks to our engaging users. Our forum is dedicated to enhancing the online experience by offering plenty of opportunities for users to engage with each other in an interesting and safe online environment.</p>
-               </span>
+                <span className="about-content">
+                  <h1>About </h1>
+                </span>
+                <span className="about-content">
+                  <p>
+                    The main discussion topic at Sona Agro often pavethe way to
+                    surprising and unexpected conservations thanks to our
+                    engaging users. Our forum is dedicated to enhancing the
+                    online experience by offering plenty of opportunities for
+                    users to engage with each other in an interesting and safe
+                    online environment.
+                  </p>
+                </span>
               </div>
             </form>
           </div>
           <div className="about-page-image">
-          <img src={Fish} alt="about image" />
-          
+            <img src={Fish} alt="about image" />
           </div>
         </div>
       </div>

@@ -11,7 +11,7 @@ const Navbar = () => {
       return (
         <>
           <li>
-            <NavLink className="navbar-links" to="/services">
+            <NavLink className="navbar-links" to="/#target" smooth>
               Services
             </NavLink>
           </li>
@@ -36,7 +36,7 @@ const Navbar = () => {
       return (
         <>
           <li>
-            <NavLink className="navbar-links" to="/services">
+            <NavLink className="navbar-links" to="/.#section">
             Services
             </NavLink>
           </li>

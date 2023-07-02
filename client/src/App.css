@@ -1,5 +1,5 @@
 
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 *{
 padding: 0;
 margin: 0;
@@ -10,6 +10,7 @@ html{
   /* 1rem = 16px */
   font-size: 62.5%;
   overflow: hidden;
+  scroll-behavior: smooth;
 }
 body{
   overflow-x: hidden;
@@ -291,4 +292,7 @@ h2{
 .service-headings button{
   padding: 0.8rem;
   width: 9rem;
+}
+.service-headings button:hover{
+  background-color:  hsl(61, 86%, 72%);;
 }

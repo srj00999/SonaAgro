@@ -50,9 +50,9 @@ const Home = () => {
         </div>
       </div>
       <div>
-        <div className="service-container">
+        <div className="service-container" >
           <div className="service-heading">
-            <h1>Services</h1>
+            <h1 id="target">Services</h1>
           </div>
           <div className="service-item-container">
             <div className="service-box">
@@ -65,7 +65,7 @@ const Home = () => {
                 <button>Buy Now</button>
               </div>
             </div>
-            <div className="service-box">
+            <div className="service-box" >
               <div className="service-picture-container">
               <img src={Image1} alt="about image" />
               </div>
