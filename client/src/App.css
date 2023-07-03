@@ -288,8 +288,8 @@ background-color: black;
 }
 .service-headings{
   display: flex;
-  justify-content: start;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   line-height: 4rem;
   padding-top: 8rem;
