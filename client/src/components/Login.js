@@ -25,7 +25,7 @@ const Login = () => {
         password,
       }),
     });
-
+    
     const data = await res.json();
     if (res.status === 400 || !data) {
       window.alert("Invalid Credentials");
@@ -37,17 +37,19 @@ const Login = () => {
 
       navigate("/");
     }
+
   };
+
+  
 
   return (
     <>
       <div className="home-container">
         
         <div className="box">
-          <form className="form-login" method="POST" autocomplete="off">
+          <form className="form-login" method="POST" >
             <h2>Sign in</h2>
             <div className="inputBox">
-              {/* <input type="text" required="required"> */}
               <input
                 type="text"
                 name="email"
@@ -63,7 +65,6 @@ const Login = () => {
               <i></i>
             </div>
             <div className="inputBox">
-              {/* <input type="password" required="required"> */}
               <input
                 type="text"
                 name="password"
@@ -82,7 +83,7 @@ const Login = () => {
               <a href="#">Forgot Password ?</a>
               <a href="#">Signup</a>
             </div>
-            {/* <input type="submit" value="Login"> */}
+
             <input
               type="submit"
               name=" sign-in"
