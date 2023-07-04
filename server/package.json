@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js",
+    "start":"node app.js",
+    "server":"nodemon app.js",
+    "dev": "concurrently \"npm start\"\"npm run client\"",
+    "client":"npm start --prefix ./client",
     "build": "npm i"
   },
   "keywords": [],
-  "author": "",
+  "author": "suraj",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
