@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../App";
 import "./Login.css";
+import { BASE_URL } from "./services/helper";
 
 
 
@@ -15,7 +16,7 @@ const Login = () => {
   const loginUser = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("/signin", {
+    const res = await fetch(`${BASE_URL}/signin`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
