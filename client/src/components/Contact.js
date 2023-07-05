@@ -14,7 +14,7 @@ const Contact = () => {
   
   const userContactPage =  async()=>{
     try{
-      const res  = await fetch('/getdata' , {
+      const res  = await fetch('https://sona-agro.onrender.com/getdata' , {
         method:"GET",
         headers:{
           "Content-Type" : "application/json"
