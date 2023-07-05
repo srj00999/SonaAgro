@@ -27,7 +27,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink className="navbar-links" to="contact">
-              Hi User !
+              Hi User!
             </NavLink>
           </li>
           <li>

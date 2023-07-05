@@ -357,3 +357,10 @@ border: hidden;
   margin: 1rem;
   width: 15rem;
 }
+
+
+.logout_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -10,7 +10,7 @@ const {state, dispatch} = useContext(UserContext);
 
 const navigate = useNavigate();
 useEffect(()=>{
-    fetch('/logout',{
+    fetch('https://sona-agro.onrender.com/logout',{
         method:"GET",
         headers:{
             Accept:"appllication/json",
@@ -32,7 +32,13 @@ useEffect(()=>{
 
 
   return (
-    <div><h1>Logout</h1></div>
+    <>
+    <div className="home-container">
+        <div className='logout_container'>
+            <h1>Logout Successfully</h1>
+        </div>
+    </div>
+    </>
   )
 }
 
