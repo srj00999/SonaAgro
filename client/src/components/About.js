@@ -33,9 +33,9 @@ const About = () => {
     }
   };
 
-  useEffect(() => {
-    callAboutPage();
-  }, []);
+  // useEffect(() => {
+  //   callAboutPage();
+  // }, []);
 
   return (
     <>
