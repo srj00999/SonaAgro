@@ -1,1 +1,0 @@
-export const BASE_URL = "https://sona-agro.onrender.com"

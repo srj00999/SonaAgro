@@ -3,7 +3,7 @@ const jwt  = require('jsonwebtoken');
 const router = express.Router();
 const bycrpt = require("bcryptjs");
 const authenticate  = require("../middleware/authenticate");
-const BASE_URL = process.env.BASE_URL
+
 
 const cookieParser = require("cookie-parser");
 router.use(cookieParser());
@@ -81,7 +81,7 @@ router.post("/register", async (req, res) => {
 
 
 
-router.post(`${BASE_URL}/signin`, async (req, res) => {
+router.post("/signin", async (req, res) => {
   try {
     const { email, password } = req.body;
 
