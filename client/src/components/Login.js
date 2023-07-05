@@ -25,7 +25,7 @@ const Login = () => {
         password,
       }),
     });
-    
+    console.log("res" , res);
     const data = await res.json();
     if (res.status === 400 || !data) {
       window.alert("Invalid Credentials");
