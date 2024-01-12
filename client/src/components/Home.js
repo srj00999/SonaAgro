@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Image1 from "../images/Image1.png";
+import '../Css/Home.css'
 
 const Home = () => {
   const [userName, setUserName] = useState("");

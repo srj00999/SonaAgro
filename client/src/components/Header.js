@@ -1,21 +1,22 @@
 import React from "react";
 import Navbar from "./Navbar";
 import { Link, Outlet } from "react-router-dom";
-import SonaAgro from "../images/SonaAgro.jpeg";
+// import SonaAgro from "../images/SonaAgro.jpeg";
+import SonaNew from "../images/SonaNew.png";
 import Footer from "./Footer";
+import '../Css/Header.css';
 
 const Header = () => {
   return (
-    <div >
+    <div className="header-container">
       <div className="header activee">
         <Link to="/">
-          <img src={SonaAgro} alt="Logo" className="logo" />
+          <img src={SonaNew} alt="Logo" className="logo" />
         </Link>
         <Navbar />
       </div>
       <Outlet />
-      <Footer/>
-      
+      <Footer />
     </div>
   );
 };

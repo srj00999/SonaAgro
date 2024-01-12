@@ -1,0 +1,51 @@
+/* Navbar.css */
+
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar styles */
+nav {
+  background-color:  #1EBBD7;;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-links {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-links:hover {
+  background-color:  #1EBBD7;
+  border-bottom: 1px solid #fff;
+}
+
+.active {
+  background-color:  #1EBBD7;;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .navbar-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    margin-top: 10px;
+    width: 100%;
+  }
+}

@@ -1,7 +1,8 @@
+
 import React, { useContext } from "react";
-// import "bootstrap/dist/css/bootstrap.css";
 import { NavLink } from "react-router-dom";
 import { UserContext } from "../App";
+import '../Css/Navbar.css';
 
 const Navbar = () => {
   const { state } = useContext(UserContext);
@@ -11,27 +12,27 @@ const Navbar = () => {
       return (
         <>
           <li>
-            <NavLink className="navbar-links" to="/#target" smooth>
+            <NavLink className="navbar-links" activeClassName="active" to="/#target" smooth>
               Services
             </NavLink>
           </li>
           <li>
-            <NavLink className="navbar-links" to="about">
+            <NavLink className="navbar-links" activeClassName="active" to="about">
               About
             </NavLink>
           </li>
           <li>
-            <NavLink className="navbar-links" to="contact">
+            <NavLink className="navbar-links" activeClassName="active" to="contact">
               Contact
             </NavLink>
           </li>
           <li>
-            <NavLink className="navbar-links" to="contact">
+            <NavLink className="navbar-links" activeClassName="active" to="contact">
               Hi User!
             </NavLink>
           </li>
           <li>
-            <NavLink className="navbar-links" to="logout">
+            <NavLink className="navbar-links logout" activeClassName="active" to="logout">
               Logout
             </NavLink>
           </li>
@@ -41,27 +42,27 @@ const Navbar = () => {
       return (
         <>
           <li>
-            <NavLink className="navbar-links" to="/.#section">
-            Services
+            <NavLink className="navbar-links" activeClassName="active" to="/.#section">
+              Services
             </NavLink>
           </li>
           <li>
-            <NavLink className="navbar-links" to="about">
+            <NavLink className="navbar-links" activeClassName="active" to="about">
               About
             </NavLink>
           </li>
           <li>
-            <NavLink className="navbar-links" to="contact">
+            <NavLink className="navbar-links" activeClassName="active" to="contact">
               Contact
             </NavLink>
           </li>
           <li>
-            <NavLink className="navbar-links" to="login">
+            <NavLink className="navbar-links" activeClassName="active" to="login">
               Login
             </NavLink>
           </li>
           <li>
-            <NavLink className="navbar-links" to="Signup">
+            <NavLink className="navbar-links signup" activeClassName="active" to="Signup">
               Sign Up
             </NavLink>
           </li>
