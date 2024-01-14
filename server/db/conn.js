@@ -2,8 +2,7 @@ const mongoose = require("mongoose");
 
 const DB = process.env.DATABASE;
 
-
-mongoose.connect("mongodb+srv://srj00999:PTevoDKTeaGLX3J7@users.hjgncvi.mongodb.net/FishFarm?retryWrites=true&w=majority").then(() => {
+mongoose.connect(DB).then(() => {
     console.log("DB connection successful");
   })
   .catch((err) => {
