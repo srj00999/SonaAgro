@@ -4,9 +4,8 @@ import { UserContext } from '../App';
 import '../Css/Logout.css';
 
 
-const Logout = () => {
-  // Promises
-  const { state, dispatch } = useContext(UserContext);
+const Logout = () => 
+  {  const { state, dispatch } = useContext(UserContext);
   const navigate = useNavigate();
 
   useEffect(() => {

@@ -19,6 +19,8 @@ body, html {
 }
 
 .logo {
+  padding-left: 2rem ;
+  padding-bottom: 0.8rem;
   max-width: 50%;
   height: auto;
 }

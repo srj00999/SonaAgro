@@ -43,7 +43,7 @@ const Home = () => {
                 <div className="welcome-note">"Happy ,to see you back"</div>
               ) : (
                 <div className="welcome-note">
-                  "We are Happy to Serve You Better"
+                  "Nurturing Oceans, Harvesting Excellence"
                 </div>
               )}
             </h3>
