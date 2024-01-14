@@ -1,0 +1,55 @@
+/* Service.css */
+.service {
+  padding: 80px 20px; /* Increased padding for more height */
+  background-color: #f8f8f8;
+}
+
+.service-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.service-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.service-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.service-list-item {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* Media Query for smaller screens */
+@media only screen and (max-width: 768px) {
+  .service-content {
+    padding: 40px; /* Adjusted padding for smaller screens */
+  }
+
+  .service-title {
+    font-size: 2rem;
+  }
+
+  .service-text,
+  .service-list-item {
+    font-size: 1rem;
+  }
+}

@@ -1,44 +1,28 @@
-import React, { createContext, useReducer } from "react";
-import { Routes, Route } from "react-router-dom";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Home from "./components/Home";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
-import Header from "./components/Header";
-import Errorpage from "./components/Errorpage";
-import Logout from "./components/Logout";
-import { initialState, reducer } from "./reducer/UseReducer";
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Routes instead of Switch
+import Header from './Components/Header';
+import Home from './Components/Home';
+import About from './Components/About';
+import Service from './Components/Service';
+import Contact from './Components/Contact';
+import Footer from './Components/Footer';
 
-
- export const UserContext = createContext();
-
-  const Routing = () => {
-    return (
-      <>
-        <Routes>
-          <Route path="/" element={<Header />}>
-            <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="login" element={<Login />} />
-            <Route path="signup" element={<Signup />} />
-            <Route path="logout" element={<Logout />} />
-            <Route path="*" element={<Errorpage />} />
-          </Route>
-        </Routes>
-      </>
-    );
-  };
-const App = () => {
- const [state, dispatch] = useReducer(reducer, initialState)
+function App() {
   return (
-    <>
-      <UserContext.Provider value={{state, dispatch}}>
-        <Routing/>
-      </UserContext.Provider>
-    </>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Service />} />
+          <Route path="/Contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
-};
+}
 
 export default App;

@@ -1,0 +1,65 @@
+/* Contact.css */
+.contact {
+    padding: 80px 20px;
+    background-color: #f8f8f8;
+  }
+  
+  .contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact .title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .contact .text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  .contact-details {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .contact-info {
+    flex: 1;
+  }
+  
+  .contact-info .info-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .contact-info .info-text {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  /* Media Query for smaller screens */
+  @media only screen and (max-width: 768px) {
+    .contact-content {
+      padding: 40px;
+    }
+  
+    .contact .title {
+      font-size: 2rem;
+    }
+  
+    .contact .text,
+    .contact-info .info-title,
+    .contact-info .info-text {
+      font-size: 1rem;
+    }
+  }
+  

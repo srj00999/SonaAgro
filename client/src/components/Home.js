@@ -1,101 +1,37 @@
-import React, { useState, useEffect } from "react";
-import { Outlet } from "react-router-dom";
-import Image1 from "../images/Image1.png";
-import '../Css/Home.css'
+import React, { useEffect, useState } from 'react';
+import '../assets/Styles/Home.css';
+import Chickens from '../assets/Images/Chickens.jpg';
+import Goats from '../assets/Images/Goats.jpg';
+import Dogs from '../assets/Images/Dogs.jpg';
+import Fishes1 from '../assets/Images/Fishes1.jpg';
+import Fishes2 from '../assets/Images/Fishes2.jpg';
 
 const Home = () => {
-  const [userName, setUserName] = useState("");
-  const [show, setShow] = useState(false);
+  const [backgroundImage, setBackgroundImage] = useState(1);
 
-  const userHomePage = async () => {
-    try {
-      const res = await fetch("https://sona-agro.onrender.com/getdata", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
-      const data = await res.json();
-      console.log(data);
-      setUserName(data.name);
-      setShow(true);
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  // Array of background images
+  const backgroundImages = [Goats, Chickens, Dogs, Fishes1, Fishes2];
 
   useEffect(() => {
-    userHomePage();
-  }, []);
+    // Change background image every 5 seconds (5000 milliseconds)
+    const intervalId = setInterval(() => {
+      setBackgroundImage((prevImage) => (prevImage % backgroundImages.length) + 1);
+    }, 5000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [backgroundImages]); // Change the dependency to backgroundImages
+  
 
   return (
-    <>
-      <div className="home-container">
-        <div className="home-container-item">
-          <h1>WELCOME TO THE SONA AGRO</h1>
-          <div className="welcome-note-container">
-            <div>
-              <h3 className="welcome-note">{userName}</h3>
-            </div>
-            <h3>
-              {show ? (
-                <div className="welcome-note">"Happy ,to see you back"</div>
-              ) : (
-                <div className="welcome-note">
-                  "Nurturing Oceans, Harvesting Excellence"
-                </div>
-              )}
-            </h3>
-          </div>
-        </div>
+    <div className="home" style={{ backgroundImage: `url(${backgroundImages[backgroundImage - 1]})` }}>
+      <div className="hero">
+        <h1>Welcome to Our Website</h1>
+        <p>Discover the best services for your needs.</p>
+        <button>Explore Now</button>
       </div>
-      <div>
-        <div className="service-container">
-          <div className="service_disk">
-            <div className="service-heading">
-              <h1 id="target">Services</h1>
-            </div>
-            <div className="service-item-container">
-              <div className="service-box">
-                <div className="service-picture-container">
-                  <img src={Image1} alt="about image" />
-                </div>
-                <div className="service-headings">
-                  <h2>Services 1</h2>
-                  <p>Fishes</p>
-                  <button>Buy Now</button>
-                </div>
-              </div>
-              <div className="service-box">
-                <div className="service-picture-container">
-                  <img src={Image1} alt="about image" />
-                </div>
-                <div className="service-headings">
-                  <h2>Services 2</h2>
-                  <p>Chicken</p>
-                  <button>Buy Now</button>
-                </div>
-              </div>
-              <div className="service-box">
-                <div className="service-picture-container">
-                  <img src={Image1} alt="about image" />
-                </div>
-                <div>
-                  <div className="service-headings">
-                    <h2>Services 3</h2>
-                    <p>Fishes</p>
-                    <button>Buy Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <Outlet />
-    </>
+    </div>
   );
 };
 

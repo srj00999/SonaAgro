@@ -1,30 +1,46 @@
-import React from "react";
-import '../Css/Footer.css';
+import React,{useRef} from 'react';
+import '../assets/Styles/Footer.css';
 
 const Footer = () => {
+    const footerRef = useRef(null); 
   return (
-    <div className="footer-container">
-      <div className="footer-section footer-contact">
-        <h1>Contact</h1>
-        <h4>Sona Agro</h4>
-        <h4>Belhadih- Bahorikpur Road</h4>
-        <h4>Belhadih Kharihani</h4>
-        <h4>Azamgarh UP 276123</h4>
+    <footer ref={footerRef} className="footer">
+      <div className="footer-container">
+        <div className="footer-section">
+          <h3>About Us</h3>
+          <p>Owner: Rohan Singh</p>
+          <p>
+            Address: Sona Agro, Belhadih- Bahorikpur Road, Belhadih Kharihani, Azamgarh, UP 276123
+          </p>
+
+        </div>
+
+        <div className="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: sonaagroazm@gmail.com</p>
+          <p>Phone: +91 7399000499</p>
+        </div>
+
+        <div className="footer-section">
+          <h3>Follow Us</h3>
+          <div className="social-icons">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-facebook"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
       </div>
-      <div className="footer-section footer-contact">
-        <h4>Mobile. 7399000499</h4>
-        <h4>Email: sonaagroazm@gmail.com</h4>
-        <h4>Book a Consultation</h4>
+
+      <div className="footer-bottom">
+      <p>&copy; 2024 Sona Agro. Meticulously crafted by Suraj Yadav. All Rights Reserved.</p>
       </div>
-      <div className="footer-section footer-follow">
-        <h4>Follow Us</h4>
-        {/* Add social media icons or links here */}
-      </div>
-      <div className="footer-section footer-subscribe">
-        <h4>Subscribe to our Newsletter</h4>
-        {/* Add a subscription form or related content here */}
-      </div>
-    </div>
+    </footer>
   );
 };
 

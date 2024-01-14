@@ -1,69 +1,29 @@
-
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import Fish from "../images/Fish.png";
-import '../Css/About.css';
+// About.js
+import React from 'react';
+import '../assets/Styles/About.css';
 
 const About = () => {
-  const [userData, setUserData] = useState({});
-  const navigate = useNavigate();
-
-  const callAboutPage = async () => {
-    try {
-      const res = await fetch("https://sona-agro.onrender.com/about", {
-        method: "GET",
-        headers: {
-          Accept: "appllication/json",
-          "Content-Type": "application/json",
-        },
-        credentials: "include", // is used to sending cookie data
-      });
-
-      const data = await res.json();
-
-      setUserData(data);
-      console.log("Data", data);
-      console.log("UserData", userData);
-
-      if (!res.status === 200) {
-        const error = new Error(res.error);
-        throw error;
-      }
-    } catch (err) {
-      console.log(err);
-      // navigate("/login");
-    }
-  };
-
-  useEffect(() => {
-    callAboutPage();
-  }, []);
-
   return (
-    <>
-      <div className="home-container">
-        <div className="about-page-container">
-          <div className="about-container">
-            <form method="GET">
-              <div className="about-content">
-                <h1>About </h1>
-                <p>
-                  The main discussion topic at Sona Agro often paves the way
-                  to surprising and unexpected conversations thanks to our
-                  engaging users. Our forum is dedicated to enhancing the
-                  online experience by offering plenty of opportunities for
-                  users to engage with each other in an interesting and safe
-                  online environment.
-                </p>
-              </div>
-            </form>
-          </div>
-          <div className="about-page-image">
-            <img src={Fish} alt="about image" />
-          </div>
-        </div>
+    <div className="about">
+      <div className="about-content">
+        <h2 className="about-title">Welcome to Sona Agro</h2>
+        <p className="about-text">
+          Sona Agro is a company dedicated to farming goats, fish, birds, and poultry. We specialize in providing reliable and efficient services to meet the needs of our customers, ensuring the highest quality products and services.
+        </p>
+
+        <h3 className="about-subtitle">Leadership Team</h3>
+        <ul className="about-list">
+          <li className="about-list-item">Founder: Kartik Yadav</li>
+          <li className="about-list-item">Director: Siddharth Yadav</li>
+          <li className="about-list-item">Managing Director: Rohan Singh</li>
+        </ul>
+
+        <h3 className="about-subtitle">Our Services</h3>
+        <p className="about-text">
+          At Sona Agro, we take orders and supply our products to customers, contributing to the growth and success of their businesses.
+        </p>
       </div>
-    </>
+    </div>
   );
 };
 
