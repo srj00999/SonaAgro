@@ -5,6 +5,7 @@ const Footer = () => {
     const footerRef = useRef(null); 
   return (
     <footer ref={footerRef} className="footer">
+      
       <div className="footer-container">
         <div className="footer-section">
           <h3>About Us</h3>

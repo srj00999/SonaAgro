@@ -1,5 +1,11 @@
+/* Reset some default styles */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Home Component Styles */
 .home {
-  padding: 20px;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -7,31 +13,34 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative; /* Added to position the content within the container */
+  position: relative;
+  transition: background-image 1s ease-in-out; /* Add transition for smooth image change */
 }
 
-
-.hero {
-  color: white;
-  text-align: center;
-  position: relative; /* Added to position the content within the container */
-  z-index: 1; /* Ensure content is above the background image */
-}
-
-.hero::before {
-  content: '';
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for better text visibility */
-  z-index: -1; /* Set to a lower value so it's behind the content */
+  background: rgba(0, 0, 255, 0.2); 
+  z-index: -1;
+}
+
+.hero {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  backdrop-filter: blur(10px); /* Apply blur effect to the entire .hero div */
 }
 
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .hero p {
@@ -57,7 +66,7 @@
 /* Media Query for smaller screens */
 @media only screen and (max-width: 768px) {
   .hero {
-    padding: 80px 20px;
+    padding: 40px 20px;
   }
 
   .hero h1 {
