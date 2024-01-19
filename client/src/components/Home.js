@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import LazyLoad from 'react-lazyload';
 import '../assets/Styles/Home.css';
 
 const Home = () => {
@@ -31,8 +32,19 @@ const Home = () => {
     };
   }, [backgroundImages]);
 
+  const backgroundStyle = {
+    backgroundImage: `url(${backgroundImages[backgroundImage]})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  };
+
   return (
-    <div className="home" style={{ backgroundImage: `url(${backgroundImages[backgroundImage]})` }}>
+    <div className="home" style={backgroundStyle}>
+      <LazyLoad height={200} offset={100}>
+        {/* Placeholder element for lazy loading, can be empty */}
+        <div style={{ width: '100%', height: '100%' }}></div>
+      </LazyLoad>
       <div className="overlay"></div>
       <div className="hero">
         <h1>Welcome to Our Website</h1>

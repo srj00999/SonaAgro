@@ -1,35 +1,44 @@
 /* About.css */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
 .about {
-  padding: 50px 20px; /* Added padding and increased height */
-  background-color: #f8f8f8; /* Background color for better contrast */
+  flex: 1;
+  padding: 50px 20px;
+  background-color: #f8f8f8;
 }
 
 .about-content {
   max-width: 800px;
   margin: 0 auto;
-  background-color: #ffffff; /* White background for content */
+  background-color: #ffffff;
   padding: 30px;
-  border-radius: 10px; /* Rounded corners for a premium look */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .about-title {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #333; /* Darker title color for contrast */
+  color: #333;
 }
 
 .about-subtitle {
   font-size: 2rem;
   margin-top: 30px;
-  color: #555; /* Subtitle color */
+  color: #555;
 }
 
 .about-text {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 20px;
-  color: #444; /* Text color */
+  color: #444;
 }
 
 .about-list {
@@ -40,13 +49,13 @@
 .about-list-item {
   font-size: 1.2rem;
   margin-bottom: 10px;
-  color: #555; /* List item color */
+  color: #555;
 }
 
 /* Media Query for smaller screens */
 @media only screen and (max-width: 768px) {
   .about-content {
-    padding: 20px; /* Adjusted padding for smaller screens */
+    padding: 20px;
   }
 
   .about-title {
@@ -62,3 +71,5 @@
     font-size: 1rem;
   }
 }
+
+/* Your existing footer styles go here */

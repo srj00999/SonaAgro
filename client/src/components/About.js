@@ -13,8 +13,8 @@ const About = () => {
 
         <h3 className="about-subtitle">Leadership Team</h3>
         <ul className="about-list">
-          <li className="about-list-item">Founder: Kartik Yadav</li>
-          <li className="about-list-item">Director: Siddharth Yadav</li>
+          <li className="about-list-item">Founder: Mahendra Singh</li>
+          <li className="about-list-item">Director: Rahul Singh</li>
           <li className="about-list-item">Managing Director: Rohan Singh</li>
         </ul>
 

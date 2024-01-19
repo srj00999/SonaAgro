@@ -1,19 +1,28 @@
-/* Reset some default browser styles */
+/* CSS */
+
+/* Define reusable colors and spacing variables */
+:root {
+  --primary-bg: #333;
+  --text-color: white;
+  --hover-color: #ffd700;
+  --mobile-bg: #444;
+  --border-color: #ffd700;
+  --menu-padding: 10px;
+}
+
 body, h1, h2, h3, p, ul, li {
   margin: 0;
   padding: 0;
 }
 
-/* Global styles */
 body {
   font-family: 'Arial', sans-serif;
 }
 
-/* Header styles */
 .header {
-  background-color: #333;
-  color: white;
-  padding: 10px;
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  padding: var(--menu-padding);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,14 +42,14 @@ body {
 }
 
 .desktop-menu a {
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
   margin-right: 20px;
   position: relative;
 }
 
 .desktop-menu a:hover {
-  color: #ffd700; /* Change to your desired hover color */
+  color: var(--hover-color);
 }
 
 .desktop-menu a::after {
@@ -49,7 +58,7 @@ body {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #ffd700; /* Change to your desired hover color */
+  background-color: var(--hover-color);
   bottom: 0;
   left: 0;
   transform: scaleX(0);
@@ -63,25 +72,35 @@ body {
 
 .mobile-menu {
   display: none;
+  flex-direction: column; /* Updated for better structure */
+  align-items: center;
+  background-color: var(--primary-bg);
 }
 
 .mobile-menu-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .mobile-menu-list a {
   text-align: center;
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
-  padding: 10px;
+  padding: var(--menu-padding);
   display: block;
   transition: background-color 0.3s ease-in-out;
 }
 
 .mobile-menu-list a:hover {
-  background-color: #444;
+  background-color: var(--mobile-bg);
+}
+
+.mobile-menu-list li {
+  margin-bottom: 10px;
 }
 
 /* Media Query for smaller screens (adjust breakpoint accordingly) */
@@ -92,6 +111,18 @@ body {
 
   .mobile-menu {
     display: flex;
-    align-items: center;
   }
 }
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-menu.open .mobile-menu-list {
+  display: flex;
+}
+
+/* React Components */
+
+
+

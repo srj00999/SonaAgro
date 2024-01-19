@@ -25,13 +25,13 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Follow Us</h3>
           <div className="social-icons">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/sonafarms?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-facebook"></i>
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/sona_farm0499?igsh=MWQwdWM0ZjgydmhuNg" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-instagram"></i>
             </a>
           </div>

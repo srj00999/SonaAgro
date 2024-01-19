@@ -1,6 +1,15 @@
 /* Service.css */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
 .service {
-  padding: 80px 20px; /* Increased padding for more height */
+  flex: 1;
+  padding: 80px 20px;
   background-color: #f8f8f8;
 }
 
@@ -41,7 +50,7 @@
 /* Media Query for smaller screens */
 @media only screen and (max-width: 768px) {
   .service-content {
-    padding: 40px; /* Adjusted padding for smaller screens */
+    padding: 40px;
   }
 
   .service-title {
@@ -53,3 +62,5 @@
     font-size: 1rem;
   }
 }
+
+/* Your existing footer styles go here */
