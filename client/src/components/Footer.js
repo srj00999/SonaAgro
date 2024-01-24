@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-section">
           <h3>About Us</h3>
-          <p>Owner: Rohan Singh</p>
+          <p>Founder: Mahendra Singh</p>
           <p>
             Address: Sona Agro, Belhadih- Bahorikpur Road, Belhadih Kharihani, Azamgarh, UP 276123
           </p>

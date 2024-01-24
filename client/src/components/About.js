@@ -1,6 +1,6 @@
-// About.js
 import React from 'react';
 import '../assets/Styles/About.css';
+import managingDirector from '../assets/Images/managingDirector.jpeg';
 
 const About = () => {
   return (
@@ -13,9 +13,24 @@ const About = () => {
 
         <h3 className="about-subtitle">Leadership Team</h3>
         <ul className="about-list">
-          <li className="about-list-item">Founder: Mahendra Singh</li>
-          <li className="about-list-item">Director: Rahul Singh</li>
-          <li className="about-list-item">Managing Director: Rohan Singh</li>
+          <li className="about-list-item">
+            <div className="team-member">
+              <img src={managingDirector} alt="Founder Mahendra Singh" className="team-member-image" />
+              <p className="team-member-name">Mahendra Singh</p>
+            </div>
+          </li>
+          <li className="about-list-item">
+            <div className="team-member">
+              <img src={managingDirector} alt="Director Rahul Singh" className="team-member-image" />
+              <p className="team-member-name">Rahul Singh</p>
+            </div>
+          </li>
+          <li className="about-list-item">
+            <div className="team-member">
+              <img src={managingDirector} alt="Managing Director Rohan Singh" className="team-member-image" />
+              <p className="team-member-name">Rohan Singh</p>
+            </div>
+          </li>
         </ul>
 
         <h3 className="about-subtitle">Our Services</h3>

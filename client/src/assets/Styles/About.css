@@ -1,5 +1,3 @@
-/* About.css */
-
 body {
   display: flex;
   flex-direction: column;
@@ -72,4 +70,25 @@ body {
   }
 }
 
-/* Your existing footer styles go here */
+.about-list {
+  list-style: none;
+  padding: 0;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column; /* Adjust to a column layout */
+  align-items: center;
+}
+
+.team-member-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.team-member-name {
+  margin-top: 10px;
+  font-weight: bold;
+}
